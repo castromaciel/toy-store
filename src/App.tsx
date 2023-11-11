@@ -1,9 +1,5 @@
 import { Navigation } from './routes'
 
-function App() {
-  return (
-    <Navigation />
-  )
-}
+const App = () => <Navigation />
 
 export default App
