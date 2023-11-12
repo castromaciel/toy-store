@@ -18,7 +18,30 @@ nav li a {
   text-decoration: none;
 }
 
+nav li a:hover {
+  color: black;
+}
+
 .nav-active {
   color: white;
+  transition: all .3s ease-out;
+}
+
+.terms-and-conditions {
+  cursor: pointer;
+}
+
+.nav-link-footer,
+.terms-and-conditions {
+  color: rgb(75, 75, 75);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-item-footer:hover,
+.terms-and-conditions:hover {
+  color: black;
   transition: all .3s ease-out;
 }
