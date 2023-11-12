@@ -1,4 +1,9 @@
-import { ProductListPage } from '@/pages'
+import {
+  Login,
+  ProductList,
+  Register,
+  Sell
+} from '@/pages'
 
 export const HOME_LINKS = [
   {
@@ -19,5 +24,16 @@ export const HOME_LINKS = [
 ]
 
 export const ROUTES = [
-  { path: '/product-list', element: ProductListPage, needsLayout: true }
+  {
+    path: '/home', element: ProductList, label: 'Inicio'
+  },
+  {
+    path: '/sell', element: Sell, label: 'Vender'
+  },
+  {
+    path: '/register', element: Register, label: 'Registrarse' 
+  },
+  {
+    path: '/login', element: Login, label: 'Ingresar' 
+  }
 ]

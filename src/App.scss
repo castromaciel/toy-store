@@ -4,39 +4,17 @@
   box-sizing: border-box;
 }
 
-
-.main-layout {
-  display: flex;
-  flex-direction: row;
-}
-
-nav {
-  background-color: #161618;
-  min-height: 100vh;
-  margin-right: 15px;
-  padding-top: 32px;
-  overflow-y: scroll;
-  text-align: center;
-  width: 250px;
-
-}
-
-nav ul {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 0;
+.background-navbar {
+  background-color: #FFEFF9;
 }
 
 nav li {
   list-style: none;
-  margin-bottom: 10px;
 }
 
 nav li a {
   color: grey;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-decoration: none;
 }
 
