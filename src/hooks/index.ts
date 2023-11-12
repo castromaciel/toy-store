@@ -1,4 +1,5 @@
-export { default as useLogin } from './useLogin'
-export { default as useRegister } from './useRegister'
-export { default as useInitUserProvider } from './useInitUserProvider'
 export { default as useConsumerUserProvider } from './useConsumerUserProvider'
+export { default as useInitUserProvider } from './useInitUserProvider'
+export { default as useLogin } from './useLogin'
+export { default as useProducts } from './useProducts'
+export { default as useRegister } from './useRegister'

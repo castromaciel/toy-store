@@ -1,15 +1,11 @@
 import axios from 'axios'
+import { Product } from '@/interfaces/products.interface'
 
-export const getAllProducts = async () => {
-  const config = {
-    method: 'get',
-    maxBodyLength: Infinity,
-    url: 'http://vps-3739175-x.dattaweb.com:4000/api/product/getProducts?page=1',
-    headers: { 
-      'Content-Type': 'application/json'
-    }
-  }
+interface ProductResponse {
+  products: Product[]
+}
 
-  const response = await axios.request(config)
+export const getAllProducts = async ():Promise<ProductResponse> => {
+  const response = await axios.get<ProductResponse>('http://vps-3739175-x.dattaweb.com:4000/api/product/getProducts?page=1')
   return response.data
 }

@@ -1,14 +1,18 @@
 import { Card } from '@/components'
-import { PRODUCTS } from '@/mocks/products'
+import { useProducts } from '@/hooks'
 
-const ProductList = () => (
-  <div className="my-4">
-    <div className="row">
-      {
-        PRODUCTS.map((product) => <Card {...product} />)
-      }
+const ProductList = () => {
+  const { products } = useProducts()
+  
+  return (
+    <div className="my-4">
+      <div className="row">
+        {
+          products?.map((product) => <Card {...product} />)
+        }
+      </div>
     </div>
-  </div>
-)
+  ) 
+}
 
 export default ProductList
