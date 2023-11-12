@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useLogin } from '@/hooks'
 
 const Login = () => {
-  const { control, onSubmit } = useLogin()
+  const { control, onSubmit, isLoading } = useLogin()
 
   return (
     <form
@@ -50,11 +50,13 @@ const Login = () => {
       />
 
       <div className="d-flex justify-content-center">
-        <input
+        <button
           type="submit"
           className="btn btn-outline-dark"
-          value="Iniciar Sesión"
-        />
+          disabled={isLoading}
+        >
+          Iniciar Sesión
+        </button>
       </div>
       
       <hr />
@@ -62,7 +64,7 @@ const Login = () => {
       <div className="d-flex justify-content-center">
         <Link
           to="/register"
-          className="btn btn-outline-dark"
+          className={`${isLoading ? 'disabled' : ''} btn btn-outline-dark`}
         >
           Crear usuario
         </Link>

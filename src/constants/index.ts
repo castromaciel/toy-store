@@ -25,18 +25,15 @@ export const HOME_LINKS = [
 
 export const ROUTES = [
   {
-    path: '/home', element: ProductList, label: 'Inicio'
+    path: '/', element: ProductList, label: 'Inicio', isPrivate: false
   },
   {
-    path: '/sell', element: Sell, label: 'Vender'
+    path: '/sell', element: Sell, label: 'Vender', isPrivate: true
   },
   {
-    path: '/register', element: Register, label: 'Registrarse' 
+    path: '/register', element: Register, label: 'Registrarse', isPrivate: false
   },
   {
-    path: '/login', element: Login, label: 'Ingresar' 
-  },
-  {
-    path: '/sell', element: Sell
+    path: '/login', element: Login, label: 'Ingresar', isPrivate: false
   }
 ]
