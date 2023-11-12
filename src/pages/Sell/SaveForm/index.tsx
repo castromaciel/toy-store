@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { getDescription } from '@/services/gpt'
+import { getDescription } from '@/services'
 
 interface IFormInput {
   image: string;
