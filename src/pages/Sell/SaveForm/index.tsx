@@ -34,15 +34,19 @@ export const SaveForm = ({ onFormSubmit, formData }: any) => {
     if (name === 'title') {
       try {
         const response = await getDescription({ title: value })
-        const IAResponse = response.products.replace(/^"|"$/g, '')
+        const IAResponse = response.description.replace(/^"|"$/g, '')
         setValue('description', IAResponse)
         onFormSubmit({
           ...formData,
-          description: IAResponse,
-          title: value
+          description: IAResponse
         })
       } catch (error) {
         console.error(error)
+      } finally {
+        onFormSubmit({
+          ...formData,
+          title: value
+        })
       }
 
       setIsLoading(false)
