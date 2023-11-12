@@ -1,3 +1,5 @@
+import { ProductListPage } from '@/pages'
+
 export const HOME_LINKS = [
   {
     src: '/vite.svg',
@@ -14,4 +16,8 @@ export const HOME_LINKS = [
     href: 'https://react.dev/',
     alt: 'React logo'
   }
+]
+
+export const ROUTES = [
+  { path: '/product-list', element: ProductListPage, needsLayout: true }
 ]
