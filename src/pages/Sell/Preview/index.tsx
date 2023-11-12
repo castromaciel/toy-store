@@ -13,12 +13,12 @@ export const Preview = ({ data }: IVisualizacionProps) => (
       { data?.image && <img src={data.image} alt="Visualización" width="100%" /> }
     </div>
     <div className="col-5">
-      { data?.title && <h3>{data.title}</h3>}
+      { data?.title && <h5>{data.title}</h5>}
       { data?.price && (
-      <p>
+      <h6>
         $
         {data.price}
-      </p>
+      </h6>
       )}
       { data?.description && <p>{data.description}</p> }
     </div>
