@@ -8,25 +8,29 @@ interface UserPanelProps {
   userName: string
 }
 
-const UserPanel: FC<UserPanelProps> = ({ logout, userName }) => (
-  <ul className="navbar-nav">
-    <li className="nav-item">
-      <NavLink className="nav-link" aria-current="page" to="/sell">Vender</NavLink>
+const UserPanel: FC<UserPanelProps> = ({ logout, userName }) => {
+  const name = userName.split(' ')[0]
+  
+  return (
+    <ul className="navbar-nav">
+      <li className="nav-item">
+        <NavLink className="nav-link" aria-current="page" to="/sell">Vender</NavLink>
 
-    </li>
-    <li className="nav-item">
-      <span className="nav-link active">
-        Hola, 
-        {' '}
-        {userName}
-        !
-      </span>
-    </li>
+      </li>
+      <li className="nav-item">
+        <span className="nav-link active">
+          Hola, 
+          {' '}
+          {name}
+          !
+        </span>
+      </li>
 
-    <li className="nav-item cursor-pointer" onClick={logout}>
-      <span className="nav-link">Salir</span>
-    </li>
-  </ul>
-)
+      <li className="nav-item cursor-pointer" onClick={logout}>
+        <span className="nav-link">Salir</span>
+      </li>
+    </ul>
+  ) 
+}
 
 export default UserPanel

@@ -6,9 +6,6 @@ import UserPanel from '../UserPanel'
 
 const Header = () => { 
   const { userAuthenticated, logout } = useConsumerUserProvider()
-  const { fullName } = userAuthenticated
-
-  const userName = fullName.split(' ')[0]
 
   return (
     <nav className="navbar navbar-expand-lg py-0 background-navbar">
@@ -34,7 +31,7 @@ const Header = () => {
 
           {
             userAuthenticated.token
-              ? <UserPanel logout={logout} userName={userName} />
+              ? <UserPanel logout={logout} userName={userAuthenticated.fullName} />
               : <NavbarLinks />
           }
         </div>
