@@ -14,7 +14,7 @@ const Login = () => {
       <Controller
         name="email"
         control={control}
-        render={({ field }) => (
+        render={({ field, formState: { errors } }) => (
           <div className="form-floating mb-3 mx-auto">
             <input
               {...field}
@@ -22,11 +22,11 @@ const Login = () => {
               className="form-control"
               id="email"
               placeholder="Email/Usuario"
-              required
             />
             <label htmlFor="email">
               Email/Usuario
             </label>
+            { errors.email && <p className="text-danger">{errors.email.message}</p> }
           </div>
         )}
       />
@@ -34,7 +34,7 @@ const Login = () => {
       <Controller
         control={control}
         name="password"
-        render={({ field }) => (
+        render={({ field, formState: { errors } }) => (
           <div className="form-floating mb-3">
             <input
               {...field}
@@ -42,9 +42,9 @@ const Login = () => {
               className="form-control"
               id="password"
               placeholder="Contraseña"
-              required
             />
             <label htmlFor="password">Contraseña</label>
+            { errors.password && <p className="text-danger">{errors.password.message}</p> }
           </div>
         )}
       />

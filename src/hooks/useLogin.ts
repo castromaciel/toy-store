@@ -1,4 +1,7 @@
+import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
+
+import { loginSchema } from '@/validations'
 
 interface UserData {
   email: string
@@ -10,7 +13,10 @@ const useLogin = () => {
     defaultValues: {
       email: '',
       password: ''
-    }
+    },
+    mode: 'onChange',
+    delayError: 1200,
+    resolver: yupResolver(loginSchema)
   })
 
   const onSubmit = (data: UserData): void => {
