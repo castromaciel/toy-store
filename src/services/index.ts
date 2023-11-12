@@ -1,3 +1,5 @@
+export * from './getAllProducts'
 export * from './getUserInfo'
-export * from './login'
 export * from './gpt'
+export * from './login'
+export * from './register'
