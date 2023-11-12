@@ -42,7 +42,7 @@ const Footer = () => (
       </ul>
     </nav>
 
-    <p className="m-0 terms-and-conditions" data-bs-toggle="Terms" data-bs-target="#terms-and-conditions">
+    <p className="m-0 terms-and-conditions" data-bs-toggle="modal" data-bs-target="#terms-and-conditions-modal">
       Términos y condiciones
     </p>
   </footer>

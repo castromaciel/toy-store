@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import { Footer, Header } from '@/components'
+import { Footer, Header, TermsAndConditionsModal } from '@/components'
 
 interface LayoutProps {
   children: ReactNode
@@ -14,6 +14,7 @@ const Layout: FC<LayoutProps> = ({ children }) => (
     </div>
 
     <Footer />
+    <TermsAndConditionsModal />
   </div>
 )
 
