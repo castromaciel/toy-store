@@ -9,7 +9,7 @@ const Layout: FC<LayoutProps> = ({ children }) => (
   <div className="main-layout">
     <Header />
 
-    <div className="container">
+    <div className="container-fluid">
       {children}
     </div>
 
