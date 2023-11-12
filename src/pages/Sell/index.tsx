@@ -14,7 +14,7 @@ const Sell = () => {
       <h2 className="mb-5">Carga de Producto</h2>
       <div className="row">
         <div className="col-md-6">
-          <SaveForm onFormSubmit={handleFormSubmit} />
+          <SaveForm onFormSubmit={handleFormSubmit} formData={formData} />
         </div>
         <div className="col-md-6">
           {formData && <Preview data={formData} />}
