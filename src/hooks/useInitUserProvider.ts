@@ -31,6 +31,7 @@ const useInitUserProvider = () => {
   const logout = React.useCallback(() => {
     setUserAuthenticated(initialState)
     localStorage.removeItem('user')
+    localStorage.removeItem('token')
 
     navigate('/loginUser')
   }, [initialState, navigate])

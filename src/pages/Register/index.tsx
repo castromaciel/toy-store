@@ -2,7 +2,7 @@ import { Controller } from 'react-hook-form'
 import { useRegister } from '@/hooks'
 
 const Register = () => {
-  const { onSubmit, control } = useRegister()
+  const { onSubmit, control, isLoading } = useRegister()
   return (
     <form
       className="mx-auto my-5 col-12 col-lg-6"
@@ -89,6 +89,7 @@ const Register = () => {
           type="submit"
           className="btn btn-outline-dark"
           value="Registrarse"
+          disabled={isLoading}
         />
       </div>
     </form>

@@ -41,14 +41,15 @@ const useRegister = () => {
         password,
         email
       }
-      const response = await register({ body })
+      const { user } = await register({ body })
 
-      localStorage.setItem('user', JSON.stringify(response))
-      localStorage.setItem('token', response.token)
+      localStorage.setItem('user', JSON.stringify(user))
+      localStorage.setItem('token', user.token)
 
       setUserAuthenticated((prevState) => ({
         ...prevState,
-        ...response
+        ...user,
+        token: user.token
       }))
       navigate('/home')
     } catch (error: any) {
