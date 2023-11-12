@@ -1,13 +1,22 @@
 import axios from 'axios'
 import { UserData } from '@/interfaces/userData.interface'
+import { UserInfo } from '@/interfaces/userInfo.interface'
 
 interface AuthParams {
   body: UserData
 }
 
+interface RegisterUserInfo extends UserInfo {
+  token: string
+}
+
+interface RegisterResponse {
+  user: RegisterUserInfo
+}
+
 export const register = async ({
   body
-}: AuthParams) => {
+}: AuthParams):Promise<RegisterResponse> => {
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -15,7 +24,7 @@ export const register = async ({
     }
   }
   
-  const response = await axios.post('http://vps-3739175-x.dattaweb.com:4000/api/users', {
+  const response = await axios.post<RegisterResponse>('http://vps-3739175-x.dattaweb.com:4000/api/users', {
     ...body
   }, config)
 
