@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { logo } from '@/assets'
+import { ROUTES } from '@/constants'
 
 const Header = () => (
   <nav className="navbar navbar-expand-lg py-0 background-navbar">
@@ -20,15 +21,11 @@ const Header = () => (
         </form>
 
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <NavLink className="nav-link" aria-current="page" to="/sell">Vender</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/register">Registrarse</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/login">Ingresar</NavLink>
-          </li>
+          {ROUTES.map(({ path, label }) => (
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to={path}>{label}</NavLink>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
