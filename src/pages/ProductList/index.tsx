@@ -1,3 +1,14 @@
-const ProductListPage = () => <p>ProductListPage</p>
+import { Card } from '@/components'
+import { PRODUCTS } from '@/mocks/products'
 
-export default ProductListPage
+const ProductList = () => (
+  <div className="my-4">
+    <div className="row">
+      {
+        PRODUCTS.map((product) => <Card {...product} />)
+      }
+    </div>
+  </div>
+)
+
+export default ProductList
