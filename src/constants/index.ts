@@ -2,7 +2,6 @@ import {
   Login,
   ProductList,
   Register,
-  SaveProduct,
   Sell
 } from '@/pages'
 
@@ -38,6 +37,6 @@ export const ROUTES = [
     path: '/login', element: Login, label: 'Ingresar' 
   },
   {
-    path: '/save-product', element: SaveProduct
+    path: '/sell', element: Sell
   }
 ]
