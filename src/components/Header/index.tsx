@@ -16,8 +16,12 @@ const Header = () => (
 
       <div className="justify-content-between mt-4 mt-lg-0 collapse navbar-collapse" id="nav-content">
         <form className="d-flex" role="search" onSubmit={(event) => event.preventDefault()}>
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-outline-dark" type="submit">Search</button>
+          <div className="input-group">
+            <input type="text" className="form-control" placeholder="Buscar..." aria-label="Search" aria-describedby="search" />
+            <button className="btn btn-outline-secondary" type="submit" id="search">
+              <i className="bi bi-search" />
+            </button>
+          </div>
         </form>
 
         <ul className="navbar-nav">
