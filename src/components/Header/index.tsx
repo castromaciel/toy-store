@@ -8,7 +8,7 @@ const Header = () => {
   const { userAuthenticated, logout } = useConsumerUserProvider()
   const { fullName } = userAuthenticated
 
-  const userName = fullName.split(' ')?.[1]
+  const userName = fullName.split(' ')[0]
 
   return (
     <nav className="navbar navbar-expand-lg py-0 background-navbar">
